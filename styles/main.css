@@ -1,0 +1,112 @@
+/* Estilos generales */
+body, nav, nav ul{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* Estilos de codigo */
+pre {
+  background-color: #1e1e1e;         /* Fondo oscuro estilo VSCode */
+  color: #ffffff;                    /* Texto blanco por defecto */
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* Estilos para <code> dentro de <pre> */
+pre code {
+  color: inherit;
+  background: none;
+}
+
+/* Opcional: estilos para <code> en línea */
+code {
+  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+  background: #eee;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* Colores por clases comunes que Eleventy/markdown-it genera */
+.token.comment,
+.comment {
+  color: #6a9955;
+}
+
+.token.string,
+.string {
+  color: #ce9178;
+}
+
+.token.number,
+.number {
+  color: #b5cea8;
+}
+
+.token.keyword,
+.keyword {
+  color: #569cd6;
+}
+
+.token.function,
+.function {
+  color: #dcdcaa;
+}
+
+.token.operator,
+.operator {
+  color: #d4d4d4;
+}
+
+/* Scroll eje Y */
+main{
+  overflow-y: scroll;
+  padding: 0 20px;
+  width: 80%;
+}
+
+/* Estilos de Navbar */
+nav{
+  width: 20%;
+  background: #171614;
+  overflow-y: scroll;
+}
+
+nav ul > li {
+  padding: 5px 0;
+}
+
+nav ul > li > a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0 0 0 10px;
+}
+
+nav ul > li > ul > li {
+  background:  #2d2d2d;
+  padding: 5px 0 5px 35px;
+}
+
+nav ul > li > ul > li > a{
+  color: #EBEBD3;
+}
+
+nav a :hover{
+  color: blue;
+}
