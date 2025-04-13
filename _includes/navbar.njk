@@ -2,10 +2,7 @@
     <ul>
         {% for section in collections.notes %}
         {% if section.parent.template.fileSlugStr.trim() %}
-        <li><a href="{{ section.parent.url }}">{{ section.parent.template.fileSlugStr | capitalize}}</a></li>
-        {% else %}
-        <li><a href="{{ section.parent.url }}">Inicio</a></li>
-        {% endif %}
+        <li><a href="{{ section.parent.url }}">{{ section.parent.template.fileSlugStr | capitalize}}</a>
             {% if section.children.length > 0 %}
                 <ul>
                     {% for subsection in section.children%}
@@ -13,6 +10,18 @@
                     {% endfor%}
                 </ul>
             {% endif %}
+        </li>
+        {% else %}
+        <li><a href="{{ section.parent.url }}">Inicio</a>
+            {% if section.children.length > 0 %}
+                <ul>
+                    {% for subsection in section.children%}
+                    <li><a href="{{ subsection.url }}">{{ subsection.data.title }}</a></li>
+                    {% endfor%}
+                </ul>
+            {% endif %}
+        </li>
+        {% endif %}
         {% endfor%}
     </ul>
 </nav>
