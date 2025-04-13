@@ -1,5 +1,5 @@
 ---
-title: Node Version Manager
+title: 02. Node Version Manager
 layout: base.njk
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Bases de Python
+title: 01. Bases de Python
 layout: base.njk
 ---
 

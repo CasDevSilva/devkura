@@ -1,5 +1,5 @@
 ---
-title: Python Intermedio
+title: 02. Python Intermedio
 layout: base.njk
 ---
 # Python Intermedio
