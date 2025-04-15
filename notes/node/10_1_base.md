@@ -1,5 +1,5 @@
 ---
-title: 01. Bases de Node
+title: 10_1. Bases de Node
 layout: base.njk
 ---
 
@@ -27,40 +27,6 @@ Node usa un modelo no bloqueante, enfocado a aplicaciones en tiempo real.
 - Poll
 - Check
 - Close callbacks
-## 1.4. Módulos en Node
-
-Se conforman de dos:
-
-- CommonJS (require)
-	- Forma clásica
-	- Es síncrono
-
-```js
-// EXPORTACION
-function sayHi(message){
-	console.log(message);
-}
-
-module.exports = {
-	sayHi
-}
-
-// IMPORTACION
-let internal = require('internal'); // Si pertenece a node modules
-let myModule = require('./modules/myModule.js'); // Modulo propio
-```
-
-- ES Modules (import)
-	- Forma moderna
-	- Es asíncrono
-
-```js
-export function sayHi(){
-	console.log("Hi ...");
-}
-
-import sayHi from "../modules/myModule.js";
-```
 
 ## 1.5. Uso de npm
 
@@ -79,25 +45,6 @@ npm update
 npm uninstall lodash
 ```
 
-## 1.6. package.json | package-lock.json
-
-- package.json
-	- Archivo de configuracion principal de un proyecto
-	- Propiedades clave
-		- name
-		- version
-		- description
-		- dependencies
-			- librerias clave del proyecto node
-		- devDependencies
-			- Librerias de desarrollo
-		- script
-			- comandos para ejecutar scripts propios o custom
-- package-lock.json
-	- Archivo automático que guarda versiones exactas de paquetes instalados
-	- Bloquea versiones exactas de los paquetes
-	- Asegura que todos los usuarios usen las mismas versiones
-
 ## 1.7. Uso de Yarn
 
 Yarn, alternativa segura y rápida de npm
@@ -112,24 +59,7 @@ yarn add express
 yarn remove lodash
 yarn upgrade
 ```
-## 1.8. Scripts personalizados en package.json
 
-En el package.json, contamos con la propiedad scripts.
-Aquí puedes agregar scripts custom para ejecutar por consola
-
-Nombres comunes de scripts
-- dev
-- start
-- test
-- lint
-- build
-- predeploy
-- deploy
-
-Ejecución de Script:
-```js
-npm run dev
-```
 ## 1.9. Módulos Core de Node js
 
 Node incluye módulos nativos como:
